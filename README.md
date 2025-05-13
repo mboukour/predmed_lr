@@ -40,13 +40,6 @@ python3 main.py
 ```
 This will train the model and compare it against sickit-learn's LinearRegression, feel free to test it however you like :)
 
-## 🗂️ File Structure
-├── insurance.csv          # Dataset used for training
-├── main.py                #  Testing script where you compare the performance of our linear regression implementation against scikit-learn's version.
-├── model.py               # Contains the code for our custom-built linear regression model.
-├── mse_plot.png           # A plot illustrating the Mean Squared Error (MSE) over epochs during training, helping to visualize how well your model is fitting the data.
-└── README.md              # You’re here!
-
 This project marks the beginning of my machine learning journey! I'm still learning and experimenting, so any feedback, comments, or pull requests are more than welcome and appreciated. Feel free to contribute or suggest improvements to help me grow. Thanks for checking it out! 🙌
 
 
