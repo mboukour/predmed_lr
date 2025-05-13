@@ -16,12 +16,14 @@ class PredMedLinearRegression:
         __original_factors (dict): Stores the original mean and standard deviation for each feature column for scaling.
     """
 
-    def __init__(self, filename: str = "insurance.csv"):
+    def __init__(self, filename: str = "insurance.csv", learning_rate: float = 0.1, max_epoch: int = 400):
         """
         Initializes the linear regression model by loading the dataset, performing preprocessing, and setting up the model.
-
+    
         Args:
             filename (str, optional): Path to the CSV file containing the dataset. Defaults to "insurance.csv".
+            learning_rate (float, optional): The learning rate for gradient descent. Defaults to 0.1.
+            max_epoch (int, optional): The maximum number of training epochs. Defaults to 400.
         """
         df = pd.read_csv(filename)
         df["smoker"] = (df["smoker"] == "yes").astype(int)
@@ -44,11 +46,9 @@ class PredMedLinearRegression:
         self.__x.to_numpy()
         self.__y = df["charges"].to_numpy()
         self.__weights = np.zeros(self.__x.shape[1])
-        self.__learning_rate = 0.1
-        self.__max_epoch = 400
+        self.__learning_rate = learning_rate
+        self.__max_epoch = max_epoch
         self.__mse_history = []
-
-
 
     def __scale_value(self, column: str, value: float) -> float:
         """
