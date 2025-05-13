@@ -1,7 +1,7 @@
 # 🏥 PredMed Linear Regression
 
 A custom-built multivariate linear regression model to **predict medical insurance charges** based on user demographics and health information.  
-No `scikit-learn`, just raw `NumPy` math and custom preprocessing 🚀
+No `scikit-learn`, just raw `NumPy` math and custom preprocessing with `Pandas` 🚀
 
 ---
 
