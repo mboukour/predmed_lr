@@ -153,5 +153,11 @@ class PredMedLinearRegression:
             plt.savefig(save)
 
     def get_mse(self) -> float:
+        """
+        Returns the final Mean Squared Error (MSE) value after training.
+    
+        Returns:
+            float: The last recorded MSE from training, representing the model's error on the training set.
+        """
         return self.__mse_history[-1]
 
