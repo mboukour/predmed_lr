@@ -25,7 +25,7 @@ This model predicts `charges` based on:
 - `children`: Number of children/dependents
 - `smoker`: Whether the person smokes (1 for yes, 0 for no)
 - `sex`: Converted to binary (`male`: 1 or 0)
-- `region`: One-hot encoded for `southwest`, `northwest`, `northeast`
+- `region`: One-hot encoded for `southwest`, `northwest`, `northeast` or `southeast`
 - `bias`: Constant added internally for the intercept term
 
 ---
