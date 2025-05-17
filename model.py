@@ -94,8 +94,6 @@ class PredMedLinearRegression:
             gradient = 2 / m * np.dot(self.__x.T, error)
             self.__weights += self.__learning_rate * gradient
             mse = 1 / m * np.dot(error.T, error)
-            if len(self.__mse_history) > 0 and abs(mse - self.__mse_history[-1]) < 1e-8:
-                self.__learning_rate *= 0.1
             self.__mse_history.append(mse)
 
 
