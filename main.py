@@ -35,17 +35,17 @@ df.drop(columns=["region", "sex"], inplace=True)
 X = df.drop("charges", axis=1)
 y = df["charges"]
 
-# Scale features (like your custom model does)
+
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Train on full data
+
 sklearn_model = LinearRegression()
 sklearn_model.fit(X_scaled, y)
 y_pred = sklearn_model.predict(X_scaled)
 sklearn_mse = mean_squared_error(y, y_pred)
 
-# Prepare test input (manually transform for sklearn)
+
 test_input = pd.DataFrame([test_data])
 test_input["southwest"] = (test_input["region"] == "southwest").astype(int)
 test_input["northwest"] = (test_input["region"] == "northwest").astype(int)
